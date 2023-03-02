@@ -14,6 +14,7 @@
   "dependencies": {
     "sass": "^1.58.3",
     "three": "^0.150.1",
-    "tweakpane": "^3.1.5"
+    "tweakpane": "^3.1.5",
+    "tweakpane-plugin-infodump": "https://github.com/doersino/tweakpane-plugin-infodump.git"
   }
 }

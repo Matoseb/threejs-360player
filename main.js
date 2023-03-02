@@ -1,7 +1,8 @@
 import './style.scss'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import './tweakpane-plugin-infodump.js';
+import * as InfodumpPlugin from 'tweakpane-plugin-infodump';
+
 import { Pane } from 'tweakpane';
 
 const video = document.createElement('video');
@@ -36,7 +37,7 @@ input.style.display = 'none';
 input.style.position = 'fixed';
 document.body.appendChild(input);
 
-pane.registerPlugin(TweakpaneInfodumpPlugin);
+pane.registerPlugin(InfodumpPlugin);
 // console.log(InfodumpPlugin);
 // add a github link in tweakpane
 pane.addBlade({
@@ -124,7 +125,7 @@ function start() {
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    console.log(canvas.width, canvas.height);
+    // console.log(canvas.width, canvas.height);
 
 
     ctx.save();

@@ -308,6 +308,11 @@ sass@^1.58.3:
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
 
+slimdown-js@0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/slimdown-js/-/slimdown-js-0.6.1.tgz#c68c9a81544fc0ca098ce6e7d392514ae59648df"
+  integrity sha512-6VVh8TwISZoqwM/MAfHbu1MXeIXpakxbTNEjHHEBVcl9uyPgbIRug1Yk0UtFec/dlwb68RFr+nWzwkTXlnlsrg==
+
 "source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
@@ -329,6 +334,12 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+"tweakpane-plugin-infodump@https://github.com/doersino/tweakpane-plugin-infodump.git":
+  version "0.2.0"
+  resolved "https://github.com/doersino/tweakpane-plugin-infodump.git#ad54bb457fc8e5ca04f51265d2dbfa946b8162d9"
+  dependencies:
+    slimdown-js "0.6.1"
 
 tweakpane@^3.1.5:
   version "3.1.5"
