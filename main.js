@@ -1,6 +1,7 @@
 import './style.scss'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import './tweakpane-plugin-infodump.js';
 import { Pane } from 'tweakpane';
 
 const video = document.createElement('video');
@@ -35,11 +36,22 @@ input.style.display = 'none';
 input.style.position = 'fixed';
 document.body.appendChild(input);
 
+pane.registerPlugin(TweakpaneInfodumpPlugin);
+// console.log(InfodumpPlugin);
+// add a github link in tweakpane
+pane.addBlade({
+  view: "infodump",
+  content: "[Github repo](https://github.com/Matoseb/threejs-360player)",
+  border: false,
+  markdown: true,
+});
+
 pane.addButton({
-  title: 'Upload video'
+  title: 'Upload video (360° monoscopic)'
 }).on('click', () => {
   input.click();
 })
+
 
 input.oninput = (ev) => {
   file = input.files[0];
