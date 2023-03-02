@@ -1,0 +1,14 @@
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+canvas {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
