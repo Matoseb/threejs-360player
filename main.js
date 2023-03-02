@@ -13,12 +13,17 @@ const pane = new Pane({
 
 const params = {
   offsetY: 0.5,
+  showFloor: true,
 }
 
 pane.addInput(params, 'offsetY', {
   min: 0,
   max: 1,
   step: 0.01,
+});
+
+pane.addInput(params, 'showFloor', {
+  label: 'Show floor'
 });
 
 let file = null;
@@ -116,6 +121,7 @@ function start() {
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height * params.offsetY);
     ctx.restore();
 
+    plane.visible = params.showFloor;
     controls.update();
     sphereMaterial.map.needsUpdate = true;
     renderer.render(scene, camera);
